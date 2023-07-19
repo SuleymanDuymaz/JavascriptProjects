@@ -8,9 +8,12 @@ else{
 }
 
 function onSuccess(position){
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
+    let latitude=position.coords.latitude;
+    let longitude=position.coords.longitude;
 
+    const api_key="4df2c465637d4eb099c478b2deddfa9f";
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${api_key}`;
+    
 
 }
 function onError(error){
