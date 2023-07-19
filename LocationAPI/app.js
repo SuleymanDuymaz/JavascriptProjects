@@ -14,7 +14,7 @@ function onSuccess(position){
     const api_key="4df2c465637d4eb099c478b2deddfa9f";
     const url = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${api_key}`;
     
-    fetch(url).then(response=>response.json()).then(result=>console.log(result));
+    fetch(url).then(response=>response.json()).then(result=>console.log(result.results[0]));
 
 }
 function onError(error){
